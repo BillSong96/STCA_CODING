@@ -2,7 +2,7 @@ class Solution {
     private List<Integer> retList = new ArrayList<>();
         
     public int[] smallestSufficientTeam(String[] req_skills, List<List<String>> people) {
-        int target = (int) Math.pow(2.0, req_skills.length) - 1;
+        int target = (1 << req_skills.length) - 1;
         Map<String, Integer> skillMap = buildMap(req_skills);
         int N = people.size();
         List<Integer> peoples = new ArrayList<>();
